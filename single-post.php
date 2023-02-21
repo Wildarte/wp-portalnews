@@ -1,5 +1,5 @@
-<?php get_header() ?>
-
+<?php get_header(); $cat = get_the_category()[0];  ?>
+<?php if(have_posts()): while(have_posts()): the_post(); ?>
 <main>
     <section class="content_page">
         <div class="container d-flex">
@@ -7,7 +7,7 @@
                 <header class="header_content_post">
                     <div class="top_header_post d-flex">
                         <div class="left_top_header_post f-50">
-                            <a href="">
+                            <a href="<?= home_url(); ?>">
                                 home
                             </a>
                         </div>
@@ -15,32 +15,32 @@
                         <div class="right_top_header_post f-50 d-flex">
                             <div><small><span>79</span> views</small> | </div>
 
-                            <div> <small><span> 3</span> comentários</small></div>
+                            <div> <small><span> <?= comments_number() ?></span></small></div>
                         </div>
                     </div>
 
                     <div class="title_header_post">
-                        <h1>Iinsect Far Aside And More Therefore Incredibly</h1>
+                        <h1><?=  get_the_title() ?></h1>
                     </div>
 
                     <div class="bottom_header_post d-flex">
                         <div class="f-50 left_bottom_header_post">
-                            <p><small><span>20 de Março de 2022</span> | em <strong>Política</strong></small></p>
+                            <p><small><span><?= get_the_date('j \d\e M \d\e Y'); ?></span> | em <strong><a href="<?= get_term_link($cat->term_id) ?>"><?= $cat->name; ?></a></strong></small></p>
                         </div>
                         <div class="f-50 d-flex right_bottom_header_post">
-                            <a href=""><i class="bi bi-twitter"></i> Twitter</a>
+                        <a class="link_twitter" href="https://twitter.com/intent/tweet?url=<?= get_the_permalink() ?>&text="><i class="bi bi-twitter"></i> Twitter</a>
 
-                            <a href=""><i class="bi bi-facebook"></i> Facebook</a>
+                        <a class="link_facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?= get_the_permalink() ?>/"><i class="bi bi-facebook"></i> Facebook</a>
 
-                            <a href=""><i class="bi bi-whatsapp"></i> WhatsApp</a>
+                        <a class="link_whatsapp" href="https://wa.me/send?text=<?= get_the_permalink() ?>"><i class="bi bi-whatsapp"></i> WhatsApp</a>
                         </div>
                     </div>
                 </header>
 
                 <div class="body_post">
                     <figure class="thumbnail_post">
-                        <img src="https://cdn.pixabay.com/photo/2021/08/17/12/49/ferris-wheel-6552970_960_720.jpg" alt="" title="">
-                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</figcaption>
+                        <img src="<?= get_the_post_thumbnail_url() ?>" alt="<?= get_image_alt($id) ?>" title="<?= get_image_alt($id) ?>">
+                        <figcaption><?= get_the_post_thumbnail_caption() ?></figcaption>
                     </figure>
 
                     <div class="alternative_intro">
@@ -48,84 +48,22 @@
                     </div>
                     
                     <div class="body_content_post">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, est. Ea modi necessitatibus animi incidunt laudantium placeat, libero rem dolore quibusdam adipisci eveniet!</p>
-
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem suscipit eius consectetur deserunt provident consequatur laborum illo a, recusandae atque earum quis ex, eum inventore blanditiis, adipisci nam facilis obcaecati dolorem commodi placeat corporis? Aliquid facilis reprehenderit sequi quasi vitae?</p>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aut reprehenderit recusandae dolor animi laboriosam doloribus distinctio obcaecati sequi excepturi earum deserunt harum, sint quam omnis quae porro minus magnam!</p>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quisquam cumque, nulla blanditiis explicabo ut, repellendus sit corporis voluptas, necessitatibus corrupti qui. Fugit ullam accusamus et doloribus id, rem numquam!</p>
                         
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, est. Ea modi necessitatibus animi incidunt laudantium placeat, libero rem dolore quibusdam adipisci eveniet!</p>
-
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem suscipit eius consectetur deserunt provident consequatur laborum illo a, recusandae atque earum quis ex, eum inventore blanditiis, adipisci nam facilis obcaecati dolorem commodi placeat corporis? Aliquid facilis reprehenderit sequi quasi vitae?</p>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aut reprehenderit recusandae dolor animi laboriosam doloribus distinctio obcaecati sequi excepturi earum deserunt harum, sint quam omnis quae porro minus magnam!</p>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quisquam cumque, nulla blanditiis explicabo ut, repellendus sit corporis voluptas, necessitatibus corrupti qui. Fugit ullam accusamus et doloribus id, rem numquam!</p>
-
-                        <figure>
-                            <img src="https://cdn.pixabay.com/photo/2018/06/10/17/39/market-3466906_960_720.jpg" alt="">
-                            <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</figcaption>
-                        </figure>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, est. Ea modi necessitatibus animi incidunt laudantium placeat, libero rem dolore quibusdam adipisci eveniet!</p>
-
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem suscipit eius consectetur deserunt provident consequatur laborum illo a, recusandae atque earum quis ex, eum inventore blanditiis, adipisci nam facilis obcaecati dolorem commodi placeat corporis? Aliquid facilis reprehenderit sequi quasi vitae?</p>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aut reprehenderit recusandae dolor animi laboriosam doloribus distinctio obcaecati sequi excepturi earum deserunt harum, sint quam omnis quae porro minus magnam!</p>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quisquam cumque, nulla blanditiis explicabo ut, repellendus sit corporis voluptas, necessitatibus corrupti qui. Fugit ullam accusamus et doloribus id, rem numquam!</p>
-
-                        <blockquote>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, aspernatur veniam vero odit velit cumque nemo soluta quam? Magni dolore velit veritatis magnam tempora labore natus nihil voluptates a doloremque.</p>
-                        </blockquote>
-
-                        <table>
-                            <tr>
-                                <th>Produto</th>
-                                <th>Preço</th>
-                            </tr>
-                            <tr>
-                                <td>Camiseta</td>
-                                <td>R$ 29,99</td>
-                            </tr>
-                            <tr>
-                                <td>Calça jeans</td>
-                                <td>R$ 69,99</td>
-                            </tr>
-                            <tr>
-                                <td>Tênis</td>
-                                <td>R$ 89,99</td>
-                            </tr>
-                        </table>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eveniet assumenda commodi possimus, rem adipisci ipsum sequi quos doloremque modi praesentium. Modi, molestiae suscipit. Dignissimos amet voluptas blanditiis labore corrupti, assumenda soluta! Quae quasi repellat exercitationem, numquam optio perferendis ex.</p>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta numquam dicta nihil, molestias dolores unde earum optio? Rem, vitae at?</p>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ipsam nesciunt blanditiis repellat vitae possimus. Esse, error similique iste deserunt placeat architecto eos tempora odio ad facere voluptate?</p>
-
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, illum iste cum ab nam nesciunt voluptas reiciendis tenetur rem. Provident modi tempora in ipsam dolores. Quam nulla voluptatum nemo odio repudiandae aut harum!</p>
-
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor temporibus fugit consequatur iste voluptate, delectus, at quo rerum autem quisquam, ad earum architecto vero deleniti. Praesentium, dolorum nesciunt minus officiis voluptatem hic earum quidem, accusantium tenetur, eius veritatis quis tempora numquam necessitatibus quo vel vero inventore quam. Ipsam dolore, minus ratione vitae blanditiis magni possimus.</p>
+                    <?=  get_the_content(); ?>
 
                     </div>
 
                     <div class="tags_post">
-                        <a href="">Cultura</a>
-                        <a href="">Arte</a>
-                        <a href="">Política</a>
-                        <a href="">Música</a>
-                        <a href="">Ciência</a>
+                        <?= get_the_tag_list(); ?>
                     </div>
 
                     <div class="info_author_post d-flex">
                         <div class="thumb_author">
-                            <img src="https://tothetheme.com/newsmonster/wp-content/uploads/2022/02/avatar_user_2_1645079868-200x200.jpg" alt="">
+                        <?php $mail_user = strval(get_the_author_meta('user_email', false)); ?>
+                            <img src="<?= get_avatar_url($mail_user, '32', '', '', null) ?>" alt="">
                         </div>
                         <div class="info_author">
-                            <h3>Jeane Doerman</h3>
+                            <h3><?= get_the_author(); ?></h3>
                             <p>Within spread beside the ouch sulky and this wonderfully and as the well and where supply much hyena so tolerantly recast hawk darn woodpecker less more so.</p>
                         </div>
                     </div>
@@ -134,74 +72,52 @@
 
                 </div>
                 <div class="related_posts">
+                    <?php
+                        $cat_post = get_the_category()[0]->slug;
+
+
+                        $args_cat_post = [
+                            'post_type' => 'post',
+                            'category_name' => $cat_post,
+                            'post__not_in' => [''.get_the_ID().''],
+                            'posts_per_page' => 4
+                        ];
+        
+                        $results_cat_post = new WP_Query($args_cat_post);
+                        
+                        
+                        if($results_cat_post->have_posts()):
+                    ?> 
+
                     <header class="header_related_posts">
                         <h3>Artigos Relacionados</h3>
                     </header>
                     <div class="list_section_simple d-flex">
+                        <?php while($results_cat_post->have_posts()): $results_cat_post->the_post(); ?>
+
                         <article class="post_simple f-25">
-                            <a href="">
-                            <img src="https://cdn.pixabay.com/photo/2018/03/10/09/45/businessman-3213659__340.jpg" alt="">
+                            <a href="<?= get_the_permalink() ?>">
+                            <img src="<?= get_the_post_thumbnail_url() ?>" alt="<?= get_image_alt($id) ?>" title="<?= get_image_alt($id) ?>">
                             </a>
             
                             <div class="info_post_simple">
-                            <p><small><span class="date_post_simple">11/05/2017</span> | <span class="category_post_simple color-red">SAÚDE</span></small></p>
+                            <p><small><span class="date_post_simple"><?=  get_the_date('d/m/Y') ?></span> | <span class="category_post_simple color-red"><?= get_the_category()[0]->name; ?></span></small></p>
                             </div>
             
                             <h3 class="title_post_simple">
-                            <a href="">The Most Fascinating Show? The Met Trying to Fix Itself</a>
+                            <a href="<?= get_the_permalink() ?>"><?=  get_the_title(); ?></a>
                             </h3>
             
-                            <a href="" class="link_post_simple">Ler Mais</a>
+                            <a href="<?= get_the_permalink() ?>" class="link_post_simple">Ler Mais</a>
                         </article>
-                        <article class="post_simple f-25">
-                            <a href="">
-                            <img src="https://cdn.pixabay.com/photo/2018/03/10/09/45/businessman-3213659__340.jpg" alt="">
-                            </a>
-            
-                            <div class="info_post_simple">
-                            <p><small><span class="date_post_simple">11/05/2017</span> | <span class="category_post_simple color-red">SAÚDE</span></small></p>
-                            </div>
-            
-                            <h3 class="title_post_simple">
-                            <a href="">The Most Fascinating Show? The Met Trying to Fix Itself</a>
-                            </h3>
-            
-                            <a href="" class="link_post_simple">Ler Mais</a>
-                        </article>
-                        <article class="post_simple f-25">
-                            <a href="">
-                            <img src="https://cdn.pixabay.com/photo/2018/03/10/09/45/businessman-3213659__340.jpg" alt="">
-                            </a>
-            
-                            <div class="info_post_simple">
-                            <p><small><span class="date_post_simple">11/05/2017</span> | <span class="category_post_simple color-red">SAÚDE</span></small></p>
-                            </div>
-            
-                            <h3 class="title_post_simple">
-                            <a href="">The Most Fascinating Show? The Met Trying to Fix Itself</a>
-                            </h3>
-            
-                            <a href="" class="link_post_simple">Ler Mais</a>
-                        </article>
-                        <article class="post_simple f-25">
-                            <a href="">
-                            <img src="https://cdn.pixabay.com/photo/2018/03/10/09/45/businessman-3213659__340.jpg" alt="">
-                            </a>
-            
-                            <div class="info_post_simple">
-                            <p><small><span class="date_post_simple">11/05/2017</span> | <span class="category_post_simple color-red">SAÚDE</span></small></p>
-                            </div>
-            
-                            <h3 class="title_post_simple">
-                            <a href="">The Most Fascinating Show? The Met Trying to Fix Itself</a>
-                            </h3>
-            
-                            <a href="" class="link_post_simple">Ler Mais</a>
-                        </article>
+
+                        <?php endwhile; wp_reset_query() ?>
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
 
+            
             <aside class="f-30 sidebar_post">
                 
             <?php include('sidebar.php') ?>
@@ -210,5 +126,5 @@
         </div>
     </section>
 </main>
-
+<?php endwhile; endif; ?>
 <?php get_footer() ?>

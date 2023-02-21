@@ -56,6 +56,17 @@ function wpcurso_config(){
 
 
     add_theme_support('title-tag'); //adiciona suporte a tag title do site, dessa forma não precisa adicionar ela no seu código fonte basta apenas adicionarmos essa linha e o wordpress se encarrega do resto
+
+    function get_image_alt($id_page){
+
+        $id_image = get_post_thumbnail_id($id_page);
+ 
+        $alt_text = get_post_meta($id_image, '_wp_attachment_image_alt', true);
+ 
+        return $alt_text;
+  
+    }
+ 
 }
 add_action('after_setup_theme','wpcurso_config',0);
 
@@ -64,19 +75,8 @@ function wpcurso_sidebars(){
 
     register_sidebar(
         [
-            'name' => 'Home Page Sidebar',
-            'id' => 'sidebar-1',
-            'description' => 'Sidebar to be used on Home Page',
-            'before_widget' => '<div class="widget-wrapper">',
-            'after_widget' => '</div>',
-            'before_title' => '<h2 class="widget-title">',
-            'after_title' => '</h2>'
-        ]
-    );
-    register_sidebar(
-        [
             'name' => 'Blog Sidebar',
-            'id' => 'sidebar-2',
+            'id' => 'sidebar-blog',
             'description' => 'Sidebar to be used on Blog Page',
             'before_widget' => '<div class="widget-wrapper">',
             'after_widget' => '</div>',

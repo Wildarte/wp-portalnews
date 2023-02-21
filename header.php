@@ -62,7 +62,8 @@
         <div class="container">
             <div class="top_header">
                 <div class="mark_marquee">
-                    Lastests
+                  <i class="bi bi-lightning-fill"></i>
+                    Últimas
                 </div>
                 <div class="list_marquee">
                     <ul class="top_content_list">
@@ -73,9 +74,6 @@
                         <li> <a class="item_list_marquee" href="https://tothetheme.com/newsmonster/timmediately-quail-was-inverse-much-so-remade-dimly-salmon/"> Timmediately quail was inverse much so remade dimly… </a> </li>
                         <li> <a class="item_list_marquee" href="https://tothetheme.com/newsmonster/unanimous-haltered-loud-gnu-resigned-trod-intriguingly-goodness/"> Unanimous haltered loud one trod trigly style four </a> </li>
                      
-                    </ul>
-                    <ul class="top_content_list">
-                        <li> <a class="item_list_marquee" href="https://tothetheme.com/newsmonster/well-incongruous-jeepers-jellyfish-one/"> Incongruous jeepers jellyfish one far Well known </a> </li>
                     </ul>
                 </div>
             </div>
@@ -114,7 +112,11 @@
 
             <div class="bottom_header">
                 <nav class="menu">
-                  <?php wp_nav_menu(['theme_location' => 'my_main_menu']); ?>
+                  <?php wp_nav_menu([
+                        'menu' => 'Main Menu',
+                        'theme_location' => 'my_main_menu',
+                        'container' => false
+                    ]) ?>
                 </nav>
 
                 <div class="location_mobile">

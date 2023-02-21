@@ -69,6 +69,7 @@
     background-color: var(--color-black);
     color: var(--color-white);
     padding: 5px 20px;
+    display: flex;
 }
 .list_marquee{
     display: flex;
@@ -246,14 +247,86 @@
 nav.menu{
     display: flex;
     width: 100%;
-    padding: 10px 0;
 }
-nav.menu ul{
+nav.menu ul.menu{
     display: flex;
 }
-nav.menu ul li a{
+nav.menu ul.menu > li{
+    padding: 10px;
+}
+nav.menu ul.menu > li > a{
     color: var(--color-dark);
-    padding: 5px 15px;
+    padding: 5px 10px;
+}
+nav.menu ul.menu li.menu-item-has-children{
+    position: relative;
+}
+nav.menu ul.menu > li.menu-item-has-children > a:after{
+    content: "▼";
+    margin-left: 6px;
+    font-size: .7em;
+}
+nav.menu ul.menu > li.menu-item-has-children ul.sub-menu{
+    position: absolute;
+    top: calc(100% + 30px);
+    left: 0;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 150px;
+    opacity: 0;
+    z-index: -1;
+    transition: all .15s;
+}
+nav.menu li.menu-item-has-children ul.sub-menu li{
+    width: 100%;
+    display: flex;
+}
+nav.menu li.menu-item-has-children ul.sub-menu li.menu-item-has-children{
+    position: relative;
+}
+nav.menu li.menu-item-has-children ul.sub-menu li.menu-item-has-children > a{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+nav.menu li.menu-item-has-children ul.sub-menu li.menu-item-has-children > a::after{
+    content: "►";
+    margin-left: 6px;
+    font-size: .7em;
+}
+nav.menu li.menu-item-has-children ul.sub-menu li.menu-item-has-children ul.sub-menu{
+    position: absolute;
+    top: 20px;
+    left:100%;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 150px;
+    opacity: 0;
+    z-index: -1;
+    transition: all .15s;
+}
+nav.menu li.menu-item-has-children ul.sub-menu li.menu-item-has-children:hover ul.sub-menu{
+    top: 0;
+    opacity: 1;
+    z-index: 1;
+}
+nav.menu li.menu-item-has-children ul.sub-menu li a{
+    padding: 10px;
+    border-bottom: 1px solid var(--color-gray);
+    width: 100%;
+    color: var(--color-dark);
+}
+nav.menu li.menu-item-has-children ul.sub-menu li a:hover{
+    background-color: #dddddd;
+}
+nav.menu ul li.menu-item-has-children:hover ul.sub-menu{
+    top: 100%;
+    opacity: 1;
+    z-index: 1;
 }
 
 .select_category_top{
