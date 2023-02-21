@@ -1,0 +1,102 @@
+.header_archive{
+    width: 100%;
+    background: #151515;
+    border: 1px solid#151515;
+    color: #fff;
+    padding: 25px;
+}
+.header_archive h1{
+    font-family: "Playfair Display";
+    text-transform: capitalize;
+    line-height: 54px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
+.header_archive p{
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;font-weight: 300;
+}
+.content_top_page{
+    padding: 40px 0 20px;
+}
+.card_post_hor{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #ddd;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+.info_card_post_hor{
+    width: 100%;
+    justify-content: space-between;
+}
+.title_card_post_hor{
+    width: 100%;
+}
+.title_card_post_hor h2 a{
+    font-size: 34px;
+    font-family: "Playfair Display";
+    text-transform: capitalize;
+    line-height: 54px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-black);
+}
+.title_card_post_hor h2 a:hover{
+    text-decoration: underline;
+}
+.content_card_post_hor{
+    width: 100%;
+    padding: 20px 0;
+}
+.thumb_card_post_hor{
+    flex-basis: 30%;
+    padding: 0 15px 0 0;
+}
+.thumb_card_post_hor img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.resume_card_post_hor{
+    flex-basis: 70%;
+    padding: 0 0 0 15px;
+    display: flex;
+    align-items: flex-start;
+}
+.resume_card_post_hor p{
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+@media(max-width: 980px){
+    .top_archive_page, .content_archive .list_card_post_hor{
+        padding: 10px;
+    }
+    .header_archive h1{
+        margin-bottom: 10px;
+    }
+}
+@media(max-width: 768px){
+    .card_post_hor{
+        padding: 10px;
+    }
+    .title_card_post_hor h2 a{
+        font-size: 30px;
+        line-height: normal;
+    }
+}
+@media(max-width: 600px){
+
+}
+@media(max-width: 420px){
+
+}
+@media(max-width: 380px){
+
+}

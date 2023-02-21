@@ -1,0 +1,10 @@
+.page_author .info_author_post{
+    border-top: 0;
+    border-bottom: 0;
+}
+
+@media(max-width: 980px){
+    .page_author_left{
+        padding: 10px;
+    }
+}
