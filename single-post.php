@@ -20,8 +20,8 @@
                     </div>
 
                     <div class="title_header_post">
-                        <h1><?=  get_the_title() ?></h1>
-                    </div>
+                        <h1><?=  get_the_title() ?></h1>  
+                    </div> 
 
                     <div class="bottom_header_post d-flex">
                         <div class="f-50 left_bottom_header_post">

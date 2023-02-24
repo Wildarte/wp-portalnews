@@ -87,5 +87,6 @@ function wpcurso_sidebars(){
 
 }
 
+ include('admin/cmb/cmbhome.php')
 
 ?>

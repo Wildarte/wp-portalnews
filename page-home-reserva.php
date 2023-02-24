@@ -59,13 +59,7 @@
         <section class="section_main">
           <div class="container main_content">
             <div class="left_main_content">
-              <div class="square_weather-2">
-             
-              <?php
-                  
-                  echo get_post_meta(get_the_ID(), 'sidebar_left', true);
-
-              ?>
+              <div class="square_weather">
 
               </div>
 
