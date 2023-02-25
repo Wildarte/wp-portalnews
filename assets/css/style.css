@@ -692,7 +692,7 @@ nav.menu ul li.menu-item-has-children:hover ul.sub-menu{
 
 }
 .list_section_simple{
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .post_simple{
     flex-basis: calc(25% - 20px);

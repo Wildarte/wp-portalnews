@@ -4,13 +4,15 @@
     <meta charset="<?php bloginfo('charset') ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- 
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/post.css">
     <link rel="stylesheet" href="assets/css/archive.css">
     <link rel="stylesheet" href="assets/css/author.css">
-     -->
+    -->
+
     <?php wp_head() ?>
 </head>
 <body>
@@ -96,7 +98,13 @@
 
                 <div class="center_middle_header">
                     <a href="" class="">
-                        <img src="https://tothetheme.com/newsmonster/wp-content/themes/javapaper/images/logo.png" alt="">
+                    <?php
+                        $custom_logo_id = get_theme_mod( 'custom_logo' );
+                        $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+
+                        add_query_arg( array( 'something' => 'blabla==' ), 'https://www.google.com' );
+                    ?>
+                    <img src="<?=  esc_url( $logo[0] )  ?>" alt="logo do site">
                     </a>
                 </div>
 
