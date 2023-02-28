@@ -1,5 +1,6 @@
-<?php get_header()
+<?php get_header();
 //Template Name: Home
+
 ?>
 
     <main>
@@ -13,10 +14,15 @@
         <section class="section_main">
           <div class="container main_content">
             <div class="left_main_content">
-              <div class="square_weather-2"><a class="weatherwidget-io" href="https://forecast7.com/pt/n23d54n46d63/state-of-sao-paulo/" data-label_1="SÃO PAULO" data-label_2="Tempo" data-theme="original" >SÃO PAULO Tempo</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script></div>
+
+            <header class="header_sidebar_left d-flex">
+
+              <img class="thumb_main_page_home" src="<?= get_the_post_thumbnail_url(null,'medium') ?>" alt="">
+
+              <h2><?= get_cat_name(get_field('categoria_geral_page')); ?></h2>
+            </header>
+              
+            <?= get_field('codigo_do_tempo'); //insere o código do tempo ?>
              
               <?php
                   
@@ -25,37 +31,11 @@
               ?>
 
               <div class="module">
-                <header class="header_module">
-                  <h2>Modulo 1 <span>SUBTÍTULO</span></h2>
-                </header>
-                <section class="content_module">
-                  <article class="card_module">
-                      <span class="category_module">
-                        <a href="">Culture</a>
-                      </span>
-
-                      <h3 class="title_module">
-                        <a href="">Incongruous Jeepers Jellyfish One Far Well Known</a>
-                      </h3>
-
-                      <p class="resume_module">Within spread beside the ouch sulky and this wonderfully and as the well and where supply much hyena so tolerantly recast</p>
-                  </article>
-
-                  <article class="card_module">
-                    <span class="category_module">
-                      <a href="">Culture</a>
-                    </span>
-
-                    <h3 class="title_module">
-                      <a href="">Incongruous Jeepers Jellyfish One Far Well Known</a>
-                    </h3>
-
-                    <p class="resume_module">Within spread beside the ouch sulky and this wonderfully and as the well and where supply much hyena so tolerantly recast</p>
-                  </article>
-
-                </section>
+                <?php get_template_part('template-parts/modules/content', 'module-left1'); ?>
               </div>
 
+              <!-- ============================================== vou usar apenas um módulo ================================== -->
+              <!-- 
               <div class="module">
                 <header class="header_module">
                   <h2>Modulo 1 <span>SUBTÍTULO</span></h2>
@@ -87,6 +67,9 @@
 
                 </section>
               </div>
+               -->
+              <!-- ============================================== vou usar apenas um módulo ================================== -->
+
             </div>
 
             <div class="center_main_content">

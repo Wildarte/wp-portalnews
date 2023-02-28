@@ -1,5 +1,6 @@
 <?php get_header(); $cat = get_the_category()[0];  ?>
 <?php if(have_posts()): while(have_posts()): the_post(); ?>
+<?php wpb_set_post_views(get_the_ID()); ?>
 <main>
     <section class="content_page">
         <div class="container d-flex">
@@ -13,7 +14,17 @@
                         </div>
 
                         <div class="right_top_header_post f-50 d-flex">
-                            <div><small><span>79</span> views</small> | </div>
+                            <?php
+
+                                $views_count = get_post_meta(get_the_ID(), 'wpb_post_views_count', true);
+                                $exibir_numero_de_views = get_field('exibir_numero_de_views');
+                                $show_view_all_post = get_field('show_view_all_post');
+
+                                if($views_count > 0):
+                                    if(!$exibir_numero_de_views && !$show_view_all_post):
+                            ?>
+                            <div><small><span><?= $views_count; ?></span> views</small> | </div>
+                                <?php endif; endif; ?>
 
                             <div> <small><span> <?= comments_number() ?></span></small></div>
                         </div>

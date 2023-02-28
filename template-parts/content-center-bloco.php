@@ -1,10 +1,13 @@
 <?php
 
+    $cat_geral_page = get_field('categoria_geral_page');
+
     $first_post = 0;
 
     $args = [
         'post_type' => 'post',
-        'posts_per_page' => 1
+        'posts_per_page' => 1,
+        'cat' => $cat_geral_page
     ];
 
     $result_center_bloco = new WP_Query($args);
@@ -17,7 +20,7 @@
 
 <article class="post_center_top">
     <a href="<?= get_the_permalink(); ?>" class="link_thumb_post_center">
-        <img src="https://cdn.pixabay.com/photo/2016/12/19/20/18/arable-1918993__340.jpg" alt="">
+        <img src="<?= get_the_post_thumbnail() ?>" alt="">
     </a>
 
     <h2 class="title_post_center_top">
@@ -40,7 +43,8 @@
     $args = [
         'post_type' => 'post',
         'posts_per_page' => 3,
-        'post__not_in' => [$first_post]
+        'post__not_in' => [$first_post],
+        'cat' => $cat_geral_page
     ];
 
 
@@ -56,7 +60,7 @@
 
     <article class="post_default">
         <div class="info_post_default">
-        <p><small><span class="info_post_default_date">02/02/2022 </span> | <span class="info_post_default_category">Esporte</span> | por <span class="info_post_default_author"><?= get_the_author(); ?></span></small></p>
+        <p><small><span class="info_post_default_date"><?= get_the_date('d/m/Y'); ?> </span> | <span class="info_post_default_category"><?= get_the_category()[0]->name; ?></span> | por <span class="info_post_default_author"><?= get_the_author(); ?></span></small></p>
         </div>
         <h3 class="title_post_default">
         <a href="<?= get_the_permalink(); ?>"><?= get_the_title(); ?></a>

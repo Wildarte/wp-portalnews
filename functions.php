@@ -87,6 +87,49 @@ function wpcurso_sidebars(){
 
 }
 
- include('admin/cmb/cmbhome.php')
+
+
+//function for count view more popular posts
+function wpb_set_post_views($postID) {
+    $count_key = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+//To keep the count accurate, lets get rid of prefetching
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+
+//  FUNCAO DE TESTE TALVEZ EU A EXCLUA
+//funcao que atribui um valor para ranking de posts 
+function wpb_set_count_post($postID, $val){
+    $count_key_post = 'wpb_count_post';
+    $contagem = get_post_meta($postID, $count_key_post, true);
+    if($contagem == ''){
+        delete_post_meta(155, $count_key_post);
+        add_post_meta(155, $count_key_post, '1');
+        echo "caiu no if"."<br>";
+        echo "valor da variavel contagem: ".$contagem;
+    }else{
+        update_post_meta($postID, $count_key_post, $val);
+        echo "nao caiu no if"."<br>";
+    }
+}
+
+
+// gerenciamento de logo
+function ed_custom_logo() {
+    add_theme_support('custom-logo'); 
+}
+add_action('after_setup_theme', 'ed_custom_logo'); // carrega parametros de suporte do tema
+
+
+//include('admin/cmb/cmbhome.php')
 
 ?>

@@ -1,14 +1,54 @@
+<?php
+
+    $type_list_post_sidebar_right = get_field('type_list_post_sidebar_right');
+    $cat_geral_page = get_field('categoria_geral_page');
+    $quantos_posts_listar = get_field('quantos_posts_listar');
+
+    $title_sidebar = 'feed diário';
+
+    switch($type_list_post_sidebar_right):
+        case "mais vistos":
+            $args = [
+                'post_type' => 'post',
+                'meta_key' => 'wpb_post_views_count',
+                'orderby' => 'meta_value_num',
+                'order' => 'DESC',
+                'posts_per_page' => $quantos_posts_listar,
+            ];
+            $title_sidebar = 'mais vistos';
+        break;
+        case "categoria da pagina":
+            $args = [
+                'post_type' => 'post',
+                'posts_per_page' => $quantos_posts_listar,
+                'cat' => $cat_geral_page
+            ];
+            $title_sidebar = 'feed diário';
+        break;
+        case "ultimos posts":
+            $args = [
+                'post_type' => 'post',
+                'posts_per_page' => $quantos_posts_listar,
+            ];
+            $title_sidebar = 'últimos posts';
+        break;
+        default:
+            $args = [
+                'post_type' => 'post',
+                'posts_per_page' => $quantos_posts_listar,
+            ];
+        endswitch;
+    
+?>
+
+<?= get_field('scripts_sidebar_right') ?>
+
 <header class="header_right_content">
-    <h2 class="title-section">Feed Diário</h2>
+    <h2 class="title-section"><?= $title_sidebar ?></h2>
 </header>
 
 <section class="content_right_content content_module">
 <?php
-
-    $args = [
-        'post_type' => 'post',
-        'posts_per_page' => 6
-    ];
 
     $results_side_right = new WP_Query($args);
 
