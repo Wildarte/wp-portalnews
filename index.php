@@ -3,7 +3,7 @@
 <main>
     <section class="content_page">
         <div class="container">
-            <header>
+            <header class="header_default">
                 <h1><?= get_the_title(); ?></h1>
             </header>
 

@@ -20,7 +20,7 @@
 
 <article class="post_center_top">
     <a href="<?= get_the_permalink(); ?>" class="link_thumb_post_center">
-        <img src="<?= get_the_post_thumbnail() ?>" alt="">
+        <img src="<?= get_the_post_thumbnail_url() ?>" alt="">
     </a>
 
     <h2 class="title_post_center_top">

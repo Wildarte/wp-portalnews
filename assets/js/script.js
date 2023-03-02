@@ -1,3 +1,6 @@
+const logo_side_header = document.getElementById('logo_side_header');
+const logo_sidebar = document.getElementById('logo_sidebar');
+
 //=============== letter auto ===============
 const itens_letter = document.querySelectorAll('.top_content_list');
 
@@ -9,32 +12,33 @@ const item_list_marquee = document.querySelectorAll('.item_list_marquee');
 let width_total_itens_marquee = 0;
 item_list_marquee.forEach((item) => {
     width_total_itens_marquee += item.getBoundingClientRect().width;
+
 })
 console.log(width_total_itens_marquee);
 //=== check soma total da largura de todos os itens ==========================
 
 
-
 let count = 0;
+let play_marquee = true;
 itens_letter.forEach((item) => {
 
-    
-    setInterval(function(){
-        if(count > width_total_itens_marquee){
-            count = 0
-        }
-        count += 1;
-        //console.log(count);
-        item.style.left = "-"+count+"px";
-    },30);
-
-
-    
+    if(play_marquee){
+        setInterval(function(){
+            if(count > width_total_itens_marquee){
+                count = 0
+            }
+            count += 1;
+            //console.log(count);
+            item.style.left = "-"+count+"px";
+        },30);
+    }
 
 });
-
-
-//==================== letter auto marquee ==============================
+document.querySelector('.list_marquee').addEventListener('click', () => {
+    
+    
+})
+//==================== letter auto marquee ===================================
 
 
 
@@ -68,6 +72,9 @@ switch_theme_dark.addEventListener('click', () => {
         
     switch_theme.classList.add('switch_dark');
     document.body.classList.add('dark_mode');
+    logo_side_header.setAttribute('src', src_logo_dark);
+    logo_sidebar.setAttribute('src', src_logo_dark);
+    setCookie('dark_mode', '1', .5);
 
 })
 
@@ -75,6 +82,9 @@ switch_theme_normal.addEventListener('click', () => {
 
     switch_theme.classList.remove('switch_dark');
     document.body.classList.remove('dark_mode');
+    logo_side_header.setAttribute('src', src_logo_normal);
+    logo_sidebar.setAttribute('src', src_logo_normal);
+    setCookie('dark_mode', '', .5);
 
 })
 //=================== switch control theme site ============================================
@@ -95,3 +105,75 @@ btn_menu_mobile.addEventListener('click', () => {
 // ============================ control menu mobile ========================================
 
 
+
+
+
+
+//============================== Cookies ==================================================
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie(cookie) {
+    let user = getCookie(cookie);
+    if (user != "") {
+        return true
+    }else{
+        return false
+    }
+}
+
+function check_cookie_card_mode(){
+    if(checkCookie('dark_mode')){
+       if(getCookie('dark_mode') == '1'){
+            switch_theme.classList.add('switch_dark');
+            document.body.classList.add('dark_mode');
+            logo_side_header.setAttribute('src', src_logo_dark);
+       }else{
+            switch_theme.classList.remove('switch_dark');
+            document.body.classList.remove('dark_mode');
+            logo_side_header.setAttribute('src', src_logo_normal);
+       }
+    }
+}
+
+check_cookie_card_mode();
+//============================== Cookies ==================================================
+
+
+
+
+
+//================================= control font ===========================================
+const btn_font_plus = document.querySelector('.btn_font_plus');
+const btn_font_less = document.querySelector('.btn_font_less');
+
+btn_font_plus.addEventListener('click', () => {
+
+    document.body.classList.add('font_plus');
+
+});
+btn_font_less.addEventListener('click', () => {
+
+    document.body.classList.remove('font_plus');
+
+});
+//================================= control font ===========================================

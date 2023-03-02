@@ -4,7 +4,7 @@
     $cat_geral_page = get_field('categoria_geral_page');
     $quantos_posts_listar = get_field('quantos_posts_listar');
 
-    $title_sidebar = 'feed diário';
+    $title_sidebar = 'feed diário'; 
 
     switch($type_list_post_sidebar_right):
         case "mais vistos":
@@ -17,7 +17,7 @@
             ];
             $title_sidebar = 'mais vistos';
         break;
-        case "categoria da pagina":
+        case "categoria da página":
             $args = [
                 'post_type' => 'post',
                 'posts_per_page' => $quantos_posts_listar,
@@ -25,7 +25,7 @@
             ];
             $title_sidebar = 'feed diário';
         break;
-        case "ultimos posts":
+        case "útimos posts":
             $args = [
                 'post_type' => 'post',
                 'posts_per_page' => $quantos_posts_listar,
@@ -35,7 +35,7 @@
         default:
             $args = [
                 'post_type' => 'post',
-                'posts_per_page' => $quantos_posts_listar,
+                'posts_per_page' => 6,
             ];
         endswitch;
     
@@ -69,7 +69,7 @@
         <p class="resume_module"><?= get_the_excerpt(); ?></p>
     </article>
 
-<?php endwhile; endif; ?>
+<?php endwhile; endif; wp_reset_query() ?>
 
 <!-- 
     <article class="card_module">

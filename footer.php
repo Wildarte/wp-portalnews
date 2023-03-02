@@ -53,6 +53,20 @@
         </div>
     </footer>
     <script src="assets/js/script.js"></script>
+    <script>
+
+      let src_logo_normal = '';
+      let src_logo_dark = '';
+      <?php
+        $custom_logo_id = get_theme_mod( 'custom_logo' );
+        $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+      ?>
+
+      src_logo_normal = '<?=  esc_url( $logo[0] )  ?>';
+      src_logo_dark = '<?= get_header_image(); ?>';
+      
+    </script>
     <?php wp_footer() ?>
+
 </body>
 </html>

@@ -34,7 +34,7 @@
     ?>
     <article class="card_module">
         <span class="category_module">
-        <a href="<?= get_term_link(get_the_category()[0]->term_id); ?>"><?= get_the_category()[0]->name; ?></a>
+            <a href=""><?= get_the_category()[0]->name; ?></a>
         </span>
 
         <h3 class="title_module">

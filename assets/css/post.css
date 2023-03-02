@@ -39,6 +39,16 @@
     color: var(--color-black);
     margin: 0;
 }
+.content_page header{
+    padding: 20px 10px;
+}
+.content_page h1{
+    font-size: 2.5em;
+    font-weight: 300;
+}
+.content_page img{
+    width: 100%;
+}
 /* content page */
 .content_post{
     padding-right: 10px;

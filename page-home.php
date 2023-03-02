@@ -34,42 +34,6 @@
                 <?php get_template_part('template-parts/modules/content', 'module-left1'); ?>
               </div>
 
-              <!-- ============================================== vou usar apenas um módulo ================================== -->
-              <!-- 
-              <div class="module">
-                <header class="header_module">
-                  <h2>Modulo 1 <span>SUBTÍTULO</span></h2>
-                </header>
-                <section class="content_module">
-                  <article class="card_module">
-                      <span class="category_module">
-                        <a href="">Culture</a>
-                      </span>
-
-                      <h3 class="title_module">
-                        <a href="">Incongruous Jeepers Jellyfish One Far Well Known</a>
-                      </h3>
-
-                      <p class="resume_module">Within spread beside the ouch sulky and this wonderfully and as the well and where supply much hyena so tolerantly recast</p>
-                  </article>
-
-                  <article class="card_module">
-                    <span class="category_module">
-                      <a href="">Culture</a>
-                    </span>
-
-                    <h3 class="title_module">
-                      <a href="">Incongruous Jeepers Jellyfish One Far Well Known</a>
-                    </h3>
-
-                    <p class="resume_module">Within spread beside the ouch sulky and this wonderfully and as the well and where supply much hyena so tolerantly recast</p>
-                  </article>
-
-                </section>
-              </div>
-               -->
-              <!-- ============================================== vou usar apenas um módulo ================================== -->
-
             </div>
 
             <div class="center_main_content">
@@ -86,7 +50,7 @@
 
         <section class="section_two_col">
           <div class="container">
-            <?php get_template_part('template-parts/content','hot-posts') ?>
+            <?php get_template_part('template-parts/content','hot-posts'); ?>
           </div>
           
         </section>
@@ -94,199 +58,13 @@
 
         <section class="section_modules">
           <div class="container">
-            <header class="header_two_col">
-              <div class="content_header_two_col">
-                <h2 class="title-section">Acontecimentos Globais</h2>
-                <p>Últimas notícias mais quentes</p>
-              </div>
-              <div class="row_gray"></div>
-            </header>
-  
-            <section class="list_row_modules d-flex">
-              <div class="f-25 col_list_row">
-                <header class="header_module">
-                  <h2>Modulo 1 <span>SUBTÍTULO</span></h2>
-                </header>
-                <article class="card_module">
-                  <span class="category_module">
-                    <a href="">Culture</a>
-                  </span>
-    
-                  <h3 class="title_module">
-                    <a href="">Incongruous Jeepers Jellyfish One Far Well Known</a>
-                  </h3>
-    
-                  <p class="resume_module">Within spread beside the ouch sulky and this wonderfully and as the well and where supply much hyena so tolerantly recast</p>
-                </article>
-              </div>
-              
-              <div class="f-25 col_list_row">
-                <header class="header_module">
-                  <h2>Modulo 1 <span>SUBTÍTULO</span></h2>
-                </header>
-                <article class="card_module">
-                  <span class="category_module">
-                    <a href="">Culture</a>
-                  </span>
-    
-                  <h3 class="title_module">
-                    <a href="">Incongruous Jeepers Jellyfish One Far Well Known</a>
-                  </h3>
-    
-                  <p class="resume_module">Within spread beside the ouch sulky and this wonderfully and as the well and where supply much hyena so tolerantly recast</p>
-                </article>
-              </div>
-
-              <div class="f-25 col_list_row">
-                <header class="header_module">
-                  <h2>Modulo 1 <span>SUBTÍTULO</span></h2>
-                </header>
-                <article class="card_module">
-                  <span class="category_module">
-                    <a href="">Culture</a>
-                  </span>
-      
-                  <h3 class="title_module">
-                    <a href="">Incongruous Jeepers Jellyfish One Far Well Known</a>
-                  </h3>
-      
-                  <p class="resume_module">Within spread beside the ouch sulky and this wonderfully and as the well and where supply much hyena so tolerantly recast</p>
-                </article>
-              </div>
-
-              <div class="f-25 col_list_row">
-                <header class="header_module">
-                  <h2>Modulo 1 <span>SUBTÍTULO</span></h2>
-                </header>
-                <article class="card_module">
-                  <span class="category_module">
-                    <a href="">Culture</a>
-                  </span>
-        
-                  <h3 class="title_module">
-                    <a href="">Incongruous Jeepers Jellyfish One Far Well Known</a>
-                  </h3>
-        
-                  <p class="resume_module">Within spread beside the ouch sulky and this wonderfully and as the well and where supply much hyena so tolerantly recast</p>
-                </article>
-              </div>
-
-            </section>
-
-            <section class="list_row_two d-flex">
-              <div class="f-50 list_row_two_col">
-                <article class="post_default">
-                  <div class="info_post_default">
-                    <p><small><span class="info_post_default_date">02/02/2022 </span> | <span class="info_post_default_category">Esporte</span> | por <span class="info_post_default_author">Admin</span></small></p>
-                  </div>
-                  <h3 class="title_post_default">
-                    <a href="">The Best College Football Team You’ve Probably Never Heard Of</a>
-                  </h3>
-
-                  <p>Aenean rhoncus gravida nisl vel pretium. Nam ac nisl non ipsum vestibulum vehicula vulputate sagittis magna.</p>
-
-                  <a href="" class="link_post_default"><strong>Ler Mais</strong></a>
-                </article>
-
-                <article class="post_default">
-                  <div class="info_post_default">
-                    <p><small><span class="info_post_default_date">02/02/2022 </span> | <span class="info_post_default_category">Esporte</span> | por <span class="info_post_default_author">Admin</span></small></p>
-                  </div>
-                  <h3 class="title_post_default">
-                    <a href="">The Best College Football Team You’ve Probably Never Heard Of</a>
-                  </h3>
-
-                  <p>Aenean rhoncus gravida nisl vel pretium. Nam ac nisl non ipsum vestibulum vehicula vulputate sagittis magna.</p>
-
-                  <a href="" class="link_post_default"><strong>Ler Mais</strong></a>
-                </article>
-
-                <article class="post_default">
-                  <div class="info_post_default">
-                    <p><small><span class="info_post_default_date">02/02/2022 </span> | <span class="info_post_default_category">Esporte</span> | por <span class="info_post_default_author">Admin</span></small></p>
-                  </div>
-                  <h3 class="title_post_default">
-                    <a href="">The Best College Football Team You’ve Probably Never Heard Of</a>
-                  </h3>
-
-                  <p>Aenean rhoncus gravida nisl vel pretium. Nam ac nisl non ipsum vestibulum vehicula vulputate sagittis magna.</p>
-
-                  <a href="" class="link_post_default"><strong>Ler Mais</strong></a>
-                </article>
-              </div>
-
-              <div class="f-25 list_row_two_col">
-                <div class="module">
-                  <header class="header_module">
-                    <h2>Modulo 1 <span>SUBTÍTULO</span></h2>
-                  </header>
-                  <section class="content_module">
-                    <article class="card_module">
-                        <span class="category_module">
-                          <a href="">Culture</a>
-                        </span>
-  
-                        <h3 class="title_module">
-                          <a href="">Incongruous Jeepers Jellyfish One Far Well Known</a>
-                        </h3>
-  
-                        <p class="resume_module">Within spread beside the ouch sulky and this wonderfully and as the well and where supply much hyena so tolerantly recast</p>
-                    </article>
-  
-                    <article class="card_module">
-                      <span class="category_module">
-                        <a href="">Culture</a>
-                      </span>
-  
-                      <h3 class="title_module">
-                        <a href="">Incongruous Jeepers Jellyfish One Far Well Known</a>
-                      </h3>
-  
-                      <p class="resume_module">Within spread beside the ouch sulky and this wonderfully and as the well and where supply much hyena so tolerantly recast</p>
-                    </article>
-  
-                  </section>
-                </div>
-              </div>
-
-              <div class="f-25 list_row_two_col">
-                <div class="module">
-                  <header class="header_module">
-                    <h2>Modulo 1 <span>SUBTÍTULO</span></h2>
-                  </header>
-                  <section class="content_module">
-                    <article class="card_module">
-                        <span class="category_module">
-                          <a href="">Culture</a>
-                        </span>
-  
-                        <h3 class="title_module">
-                          <a href="">Incongruous Jeepers Jellyfish One Far Well Known</a>
-                        </h3>
-  
-                        <p class="resume_module">Within spread beside the ouch sulky and this wonderfully and as the well and where supply much hyena so tolerantly recast</p>
-                    </article>
-  
-                    <article class="card_module">
-                      <span class="category_module">
-                        <a href="">Culture</a>
-                      </span>
-  
-                      <h3 class="title_module">
-                        <a href="">Incongruous Jeepers Jellyfish One Far Well Known</a>
-                      </h3>
-  
-                      <p class="resume_module">Within spread beside the ouch sulky and this wonderfully and as the well and where supply much hyena so tolerantly recast</p>
-                    </article>
-  
-                  </section>
-                </div>
-              </div>
-            </section>
+            <?php get_template_part('template-parts/content', 'bloco-3'); ?>
           </div>
           
         </section>
 
+        <!-- ///////////////// POR ENQUANTO VOU DEIXAR SEM ESSAS PARTES //////////////////////// -->
+        <!-- 
         <section class="section_three_cols">
           <div class="container d-flex content_section_three_cols">
             
@@ -640,7 +418,7 @@
             </div>
           </div>
         </section>
-
+        -->
 
         <section class="section_simple">
           

@@ -125,11 +125,25 @@ function wpb_set_count_post($postID, $val){
 
 // gerenciamento de logo
 function ed_custom_logo() {
-    add_theme_support('custom-logo'); 
+    add_theme_support('custom-logo');
+    add_theme_support('custom-header', [
+        'height' => 120,
+        'width' => 500,
+        'flex-width' => true,
+        'flex-height' => true
+    ]);
 }
 add_action('after_setup_theme', 'ed_custom_logo'); // carrega parametros de suporte do tema
 
 
-//include('admin/cmb/cmbhome.php')
+
+//add custom length to excerpt
+function my_excerpt_length($length){
+    return 20;
+}
+add_filter('excerpt_length', 'my_excerpt_length');
+
+
+include('admin/fields/infoHome.php');
 
 ?>
