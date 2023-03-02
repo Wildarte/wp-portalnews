@@ -49,6 +49,9 @@
 .content_page img{
     width: 100%;
 }
+.content_page ul, .content_page ol{
+    margin: 20px 0 20px 40px
+}
 /* content page */
 .content_post{
     padding-right: 10px;

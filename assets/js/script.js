@@ -169,11 +169,69 @@ const btn_font_less = document.querySelector('.btn_font_less');
 btn_font_plus.addEventListener('click', () => {
 
     document.body.classList.add('font_plus');
+    setCookie('font_plus', '1', .5);
 
 });
 btn_font_less.addEventListener('click', () => {
 
     document.body.classList.remove('font_plus');
+    setCookie('font_plus', '0', .5);
 
 });
+
+
+function check_font_site(){
+    if(checkCookie('font_plus')){
+        if(getCookie('font_plus') == '1'){
+            document.body.classList.add('font_plus');
+        }else{
+            document.body.classList.remove('font_plus');
+        }
+    }
+}
 //================================= control font ===========================================
+
+
+
+
+//================================== control submenus mobile ===============================
+const submenus = document.querySelectorAll('nav.menu ul.menu li.menu-item-has-children');
+const submenus_submenu = document.querySelectorAll('nav.menu li.menu-item-has-children ul.sub-menu li.menu-item-has-children');
+
+submenus.forEach((item) => {
+
+    item.addEventListener('click', (e) => {
+
+        e.preventDefault();
+
+        if(item.querySelector('ul.sub-menu').classList.contains('open_sub_menu_mobile')){
+            item.querySelector('ul.sub-menu').classList.remove('open_sub_menu_mobile');
+        }else{
+            item.querySelector('ul.sub-menu').classList.add('open_sub_menu_mobile');
+        }
+
+        
+
+    });
+
+});
+
+submenus_submenu.forEach((item) => {
+
+    item.addEventListener('click', (e) => {
+
+        e.preventDefault();
+
+        if(e.currentTarget.querySelector('ul.sub-menu').classList.contains('open_sub_menu_mobile')){
+            e.currentTarget.querySelector('ul.sub-menu').classList.remove('open_sub_menu_mobile');
+        }else{
+            e.currentTarget.querySelector('ul.sub-menu').classList.add('open_sub_menu_mobile');
+        }
+
+        
+
+    });
+
+});
+
+//================================== control submenus mobile ===============================

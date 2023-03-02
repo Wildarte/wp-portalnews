@@ -1,49 +1,47 @@
 <footer class="footer">
         <div class="container content_footer d-flex">
           <div class="f-25 footer_about footer_col">
+
             <h3>Sobre</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur iusto tempora ad magni dicta expedita quis perspiciatis pariatur, voluptate soluta voluptatem! Officiis, iusto?</p>
+            <p><?= bloginfo('description'); ?></p>
+            
           </div>
-          <div class="f-25 footer_col">
-            <h3>News</h3>
+          <div class="f-75">
+            <header class="header_footer">
+              <h2>últimos Posts</h2>
+            </header>
+            <div class=" d-flex">
+              <?php
 
-            <div class="footer_list_post">
-              <a href="">
-                <h4>Incongruous Jeepers Jellyfish One Far Well Known</h4>
-              </a>
+                $args = [
+                  'post_type' => 'post',
+                  'posts_per_page' => 3
+                ];
 
-              <a href="">
-                <h4>Timmediately Quail Was Inverse Much So Remade Dimly Salmon</h4>
-              </a>
+                $results_footer = new WP_Query($args);
+
+                if($results_footer->have_posts()):
+                  while($results_footer->have_posts()):
+                    $results_footer->the_post();
+
+              ?>
+              <div class="f-33 footer_col">
+                <h3><?= get_the_category()[0]->name == "" ? "Categoria" : get_the_category()[0]->name; ?></h3>
+
+                <div class="footer_list_post">
+                  <a href="<?= get_the_permalink(); ?>">
+                    <h4><?= get_the_title(); ?></h4>
+                  </a>
+
+                </div>
+              </div>
+              
+              <?php endwhile; endif; wp_reset_query() ?>
+                    
+   
             </div>
-          </div>
-          <div class="f-25 footer_col">
-            <h3>News</h3>
-
-            <div class="footer_list_post">
-              <a href="">
-                <h4>Incongruous Jeepers Jellyfish One Far Well Known</h4>
-              </a>
-
-              <a href="">
-                <h4>Timmediately Quail Was Inverse Much So Remade Dimly Salmon</h4>
-              </a>
-            </div>
-          </div>
-          <div class="f-25 footer_col">
-            <h3>News</h3>
-
-            <div class="footer_list_post">
-              <a href="">
-                <h4>Incongruous Jeepers Jellyfish One Far Well Known</h4>
-              </a>
-
-              <a href="">
-                <h4>Timmediately Quail Was Inverse Much So Remade Dimly Salmon</h4>
-              </a>
-            </div>
-          </div>
-          </div>
+          
+        </div>
         </div>
         <div class="bottom_footer">
           <div class="container">
@@ -52,7 +50,10 @@
           
         </div>
     </footer>
+    <!-- 
     <script src="assets/js/script.js"></script>
+    -->
+
     <script>
 
       let src_logo_normal = '';

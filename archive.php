@@ -52,6 +52,8 @@
                 </article>
 
                 <?php endwhile; endif; ?>
+
+                <?php get_template_part('template-parts/content', 'pagination') ?>
                 
             </div>
 

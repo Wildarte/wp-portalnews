@@ -36,7 +36,8 @@
 
                     <div class="bottom_header_post d-flex">
                         <div class="f-50 left_bottom_header_post">
-                            <p><small><span><?= get_the_date('j \d\e M \d\e Y'); ?></span> | em <strong><a href="<?= get_term_link($cat->term_id) ?>"><?= $cat->name; ?></a></strong></small></p>
+                            <?php $link_cat = get_category_link($cat->term_id); ?>
+                            <p><small><span><?= get_the_date('j \d\e M \d\e Y'); ?></span><?= $link_cat != "" ? " | em " : ""; ?><strong><a href="<?= $link_cat; ?>"><?= $cat->name; ?></a></strong></small></p>
                         </div>
                         <div class="f-50 d-flex right_bottom_header_post">
                         <a class="link_twitter" href="https://twitter.com/intent/tweet?url=<?= get_the_permalink() ?>&text="><i class="bi bi-twitter"></i> Twitter</a>
@@ -55,7 +56,7 @@
                     </figure>
 
                     <div class="alternative_intro">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam est velit iusto. Minima deleniti aliquid minus fugit repellendus.</p>
+                        <p></p>
                     </div>
                     
                     <div class="body_content_post">

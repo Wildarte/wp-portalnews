@@ -7,7 +7,7 @@
   
     <?php wp_head() ?>
 </head>
-<body class="<?php if(isset($_COOKIE['dark_mode']) && $_COOKIE['dark_mode'] == '1'){ echo 'dark_mode'; } ?>">
+<body class="<?php if(isset($_COOKIE['dark_mode']) && $_COOKIE['dark_mode'] == '1'){ echo 'dark_mode'; } ?> <?= $_COOKIE['font_plus'] == '1' ? 'font_plus' : ''; ?>">
   
 <div class="over_screen"></div>
 

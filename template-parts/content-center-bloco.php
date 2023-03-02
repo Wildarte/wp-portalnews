@@ -4,6 +4,12 @@
 
     $first_post = 0;
 
+    $numero_de_posts_central = get_field('numero_de_posts_central');
+
+    if($numero_de_posts_central == ""){
+        $numero_de_posts_central = 3;
+    }
+
     $args = [
         'post_type' => 'post',
         'posts_per_page' => 1,
@@ -42,7 +48,7 @@
 
     $args = [
         'post_type' => 'post',
-        'posts_per_page' => 3,
+        'posts_per_page' => $numero_de_posts_central-1,
         'post__not_in' => [$first_post],
         'cat' => $cat_geral_page
     ];
