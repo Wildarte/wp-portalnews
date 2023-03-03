@@ -1,8 +1,16 @@
 <?php get_header();
 //Template Name: Home
+$cor_principal_page = get_field('cor_principal_page');
 
+if(!empty($cor_principal_page)):
 ?>
 
+  <style>
+    .header_module h2, .header_sidebar_left h2, .title-section{
+        color: <?= $cor_principal_page; ?>;
+    }
+  </style>
+<?php endif; ?>
     <main>
 
         <?php 
