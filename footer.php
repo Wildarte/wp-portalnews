@@ -45,7 +45,7 @@
         </div>
         <div class="bottom_footer">
           <div class="container">
-            <p>© Copyright 2022 - My Blog. All Rights Reserved</p>
+            <p>© Copyright <?= date('Y'); ?> - Portal Registro. Todos os direitos reservados</p>
           </div>
           
         </div>

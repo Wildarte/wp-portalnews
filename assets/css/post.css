@@ -151,6 +151,7 @@ figure.thumbnail_post figcaption{
     font-weight: 400;
     font-style: normal;
     font-size: 24px;
+    width: 100%;
 }
 .info_author_post .info_author p{
     font-family: "Roboto", Helvetica, Arial, sans-serif;
@@ -204,6 +205,7 @@ figure.thumbnail_post figcaption{
 }
 .sidebar_post form{
     display: flex;
+    margin-bottom: 20px;
 }
 .sidebar_post form input[type=text]{
     width: 70%;
@@ -219,7 +221,44 @@ figure.thumbnail_post figcaption{
     padding: 10px;
     cursor: pointer;
 }
+.widget-wrapper{
+    padding: 10px 0;
+}
 .sidebar_post h3{
+    font-family: "Playfair Display";
+    text-transform: capitalize;
+    line-height: 20px;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.sidebar_post .wp-block-tag-cloud{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.sidebar_post .wp-block-tag-cloud a{
+    padding: 2px 10px;
+    border: 1px solid var(--color-dark-gray);
+    display: flex;
+    align-items: center;
+    margin: 2px;
+    color: var(--color-dark-gray);
+    transition: all .1s;
+    font-size: .9em!important;
+}
+.sidebar_post .wp-block-latest-posts.wp-block-latest-posts__list li a{
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-black);
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--color-gray);
+    width: 100%;
+}
+.sidebar_post .wp-block-group__inner-container h2{
     font-family: "Playfair Display";
     text-transform: capitalize;
     line-height: 20px;
@@ -245,6 +284,12 @@ figure.thumbnail_post figcaption{
 .sidebar_post .item-widget{
     margin: 10px 0;
     padding: 10px 0;
+}
+.sidebar_post .item-widget ul{
+    margin: 10px 0;
+}
+.sidebar_post ul{
+    margin: 10px 0;
 }
 .sidebar_post .list_tag_sidebar{
     display: flex;

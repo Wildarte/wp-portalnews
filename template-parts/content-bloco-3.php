@@ -1,5 +1,7 @@
 <?php
 
+    $titulo_bloco_3 = get_field('titulo_bloco_3');
+    $subtitulo_bloco_3 = get_field('subtitulo_bloco_3');
     $cat_bloco_3 = get_field('cat_bloco_3');
 
 ?>
@@ -7,8 +9,8 @@
 
 <header class="header_two_col">
     <div class="content_header_two_col">
-    <h2 class="title-section"><?= get_cat_name($cat_bloco_3); ?></h2>
-    <p><?= category_description($cat_bloco_3); ?></p>
+    <h2 class="title-section"><?= $titulo_bloco_3 != "" ? $titulo_bloco_3 : "Título bloco 3" ?></h2>
+    <p><?= $subtitulo_bloco_3 != "" ? $subtitulo_bloco_3 : "Subtítulo bloco 3" ?></p>
     </div>
     <div class="row_gray"></div>
 </header>

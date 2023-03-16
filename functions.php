@@ -52,7 +52,7 @@ function wpcurso_config(){
 
 
     	
-    add_theme_support( 'post-formats', ['video', 'image']); //essa linha permite habilitar diferentes formatos de post, ppor exemplo podem existir no tema posts de vídeos, imagens, etc  
+    //add_theme_support( 'post-formats', ['video', 'image']); //essa linha permite habilitar diferentes formatos de post, ppor exemplo podem existir no tema posts de vídeos, imagens, etc  
 
 
     add_theme_support('title-tag'); //adiciona suporte a tag title do site, dessa forma não precisa adicionar ela no seu código fonte basta apenas adicionarmos essa linha e o wordpress se encarrega do resto
@@ -68,7 +68,7 @@ function wpcurso_config(){
     }
  
 }
-add_action('after_setup_theme','wpcurso_config',0);
+add_action('after_setup_theme','wpcurso_config',0); 
 
 add_action('widgets_init', 'wpcurso_sidebars');
 function wpcurso_sidebars(){

@@ -104,13 +104,13 @@
                           $social_linkedin = get_option('linkedin_empresa');
                           $social_tiktok = get_option('tiktok_empresa');
                       ?>
-                        <?= $social_whatsapp != "" ? '<li><a href="https://wa.me/'.$social_whatsapp.'"><i class="bi bi-whatsapp"></i></a></li>' : ''; ?>
-                        <?= $social_facebook != "" ? '<li><a href="'.$social_facebook.'"><i class="bi bi-facebook"></i></a></li>' : ''; ?>
-                        <?= $social_instagram != "" ? '<li><a href="'.$social_instagram.'"><i class="bi bi-instagram"></i></a></li>' : ''; ?>
-                        <?= $social_twitter != "" ? '<li><a href="'.$social_twitter.'"><i class="bi bi-twitter"></i></a></li>' : ''; ?>
-                        <?= $social_youtube != "" ? '<li><a href="'.$social_youtube.'"><i class="bi bi-youtube"></i></a></li>' : ''; ?>
-                        <?= $social_linkedin != "" ? '<li><a href="'.$social_linkedin.'"><i class="bi bi-linkedin"></i></a></li>' : ''; ?>
-                        <?= $social_tiktok != "" ? '<li><a href="'.$social_tiktok.'"><i class="bi bi-tiktok"></i></a></li>' : ''; ?>
+                        <?= $social_whatsapp != "" ? '<li><a href="https://wa.me/'.$social_whatsapp.'" target="_blank"><i class="bi bi-whatsapp"></i></a></li>' : ''; ?>
+                        <?= $social_facebook != "" ? '<li><a href="'.$social_facebook.'" target="_blank"><i class="bi bi-facebook"></i></a></li>' : ''; ?>
+                        <?= $social_instagram != "" ? '<li><a href="'.$social_instagram.'" target="_blank"><i class="bi bi-instagram"></i></a></li>' : ''; ?>
+                        <?= $social_twitter != "" ? '<li><a href="'.$social_twitter.'" target="_blank"><i class="bi bi-twitter"></i></a></li>' : ''; ?>
+                        <?= $social_youtube != "" ? '<li><a href="'.$social_youtube.'" target="_blank"><i class="bi bi-youtube"></i></a></li>' : ''; ?>
+                        <?= $social_linkedin != "" ? '<li><a href="'.$social_linkedin.'" target="_blank"><i class="bi bi-linkedin"></i></a></li>' : ''; ?>
+                        <?= $social_tiktok != "" ? '<li><a href="'.$social_tiktok.'" target="_blank"><i class="bi bi-tiktok"></i></a></li>' : ''; ?>
                     </ul>
                 </div>
             </div>

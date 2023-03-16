@@ -1,5 +1,8 @@
 <?php
 
+    $titulo_noticias_quentes = get_field('titulo_one');
+    $subtitulo_noticias_quentes = get_field('subtitulo_one');
+
     $mod_left_hot_post = get_field('coluna_esquerda_hot_left');
     $mod_right_hot_post = get_field('coluna_direita_hot_right');
 
@@ -22,8 +25,8 @@
 
 <header class="header_two_col">
     <div class="content_header_two_col">
-    <h2 class="title-section">Notícias quentes</h2>
-    <p>Últimas notícias mais quentes</p>
+    <h2 class="title-section"><?= $titulo_noticias_quentes != "" ? $titulo_noticias_quentes : "Notícias quentes"; ?></h2>
+    <p><?= $subtitulo_noticias_quentes != "" ? $subtitulo_noticias_quentes : "Notícias quentes"; ?></p>
     </div>
     <div class="row_gray"></div>
 </header>

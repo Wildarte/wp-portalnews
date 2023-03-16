@@ -23,10 +23,10 @@
                                 if($views_count > 0):
                                     if(!$exibir_numero_de_views && !$show_view_all_post):
                             ?>
-                            <div><small><span><?= $views_count; ?></span> views</small> | </div>
+                            <div><small><span><?php //$views_count; ?></span> views</small> | </div>
                                 <?php endif; endif; ?>
 
-                            <div> <small><span> <?= comments_number() ?></span></small></div>
+                            <div> <small><span> <!--  <?= comments_number() ?>  --></span></small></div>
                         </div>
                     </div>
 
@@ -76,7 +76,7 @@
                         </div>
                         <div class="info_author">
                             <h3><?= get_the_author(); ?></h3>
-                            <p>Within spread beside the ouch sulky and this wonderfully and as the well and where supply much hyena so tolerantly recast hawk darn woodpecker less more so.</p>
+                            <p><?= get_the_author_meta('description'); ?></p>
                         </div>
                     </div>
 

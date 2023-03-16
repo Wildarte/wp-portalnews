@@ -1,5 +1,5 @@
 <?php get_header();
-//Template Name: Home
+//Template Name: Principal Capa
 $cor_principal_page = get_field('cor_principal_page');
 
 if(!empty($cor_principal_page)):
@@ -10,6 +10,8 @@ if(!empty($cor_principal_page)):
         color: <?= $cor_principal_page; ?>;
     }
   </style>
+
+  
 <?php endif; ?>
     <main>
 
@@ -72,7 +74,7 @@ if(!empty($cor_principal_page)):
         </section>
 
         <!-- ///////////////// POR ENQUANTO VOU DEIXAR SEM ESSAS PARTES //////////////////////// -->
-        <!-- 
+        
         <section class="section_three_cols">
           <div class="container d-flex content_section_three_cols">
             
@@ -426,7 +428,7 @@ if(!empty($cor_principal_page)):
             </div>
           </div>
         </section>
-        -->
+        
 
         <section class="section_simple">
           
