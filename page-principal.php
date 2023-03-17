@@ -13,11 +13,23 @@ if(!empty($cor_principal_page)):
 <?php endif; ?>
     <main>
 
-        <?php 
-        
-          //get_template_part('template-parts/content', 'top-categories');
-          
-        ?>
+      <section class="cats_top">
+        <div class="container content_cats_top">
+            <a href="">São Paulo</a>
+            <a href="">Rio de Janeiro</a>
+            <a href="">Mato Grosso do Sul</a>
+            <a href="">Brasília</a>
+            <a href="">Suzano</a>
+            <a href="">Tecnologia</a>
+            <a href="">São Sebastião</a>
+            <a href="">Tecnologia</a>
+            <a href="">Agricultura</a>
+            <a href="">Cavalcante</a>
+            <a href="">Brasil</a>
+            <a href="">Internacional</a>
+            <a href="">São Paulo</a>
+        </div>
+      </section>
         
         <section class="section_main">
           <div class="container main_content">

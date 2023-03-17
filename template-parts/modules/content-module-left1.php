@@ -34,7 +34,7 @@
     ?>
     <article class="card_module">
         <span class="category_module">
-            <a href=""><?= get_the_category()[0]->name; ?></a>
+            <a href="<?= get_category_link(get_the_category()[0]->term_id); ?>"><?= get_the_category()[0]->name; ?></a>
         </span>
 
         <h3 class="title_module">
@@ -46,19 +46,7 @@
 
     <?php endwhile; endif; wp_reset_query(); ?>
 
-    <!-- 
-    <article class="card_module">
-        <span class="category_module">
-            <a href="">Culture</a>
-        </span>
 
-        <h3 class="title_module">
-            <a href="">Incongruous Jeepers Jellyfish One Far Well Known</a>
-        </h3>
-
-        <p class="resume_module">Within spread beside the ouch sulky and this wonderfully and as the well and where supply much hyena so tolerantly recast</p>
-    </article>
-     -->
 
 </section>
 

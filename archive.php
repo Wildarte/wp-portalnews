@@ -39,7 +39,7 @@
                     <div class="content_card_post_hor d-flex">
                         <div class="thumb_card_post_hor">
                             <a href="<?=  get_the_permalink(); ?>">
-                            <img src="<?= get_the_post_thumbnail_url() ?>" alt="<?= get_image_alt($id) ?>" title="<?= get_image_alt($id) ?>">
+                            <?= get_the_post_thumbnail(null, 'post-archive-225') ?>
                             </a>
                             
                         </div>

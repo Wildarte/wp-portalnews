@@ -10,6 +10,7 @@ function load_scripts(){
     wp_enqueue_style('css-post', get_template_directory_uri().'/assets/css/post.css', [], '1.0', 'all');
     wp_enqueue_style('css-archive', get_template_directory_uri().'/assets/css/archive.css', [], '1.0', 'all');
     wp_enqueue_style('css-author', get_template_directory_uri().'/assets/css/author.css', [], '1.0', 'all');
+    wp_enqueue_style('css-pages', get_template_directory_uri().'/assets/css/pages.css', [], '1.0', 'all');
 
 }
 add_action('wp_enqueue_scripts', 'load_scripts');
@@ -142,6 +143,18 @@ function my_excerpt_length($length){
     return 20;
 }
 add_filter('excerpt_length', 'my_excerpt_length');
+
+
+//============================== tamanho das imagens ====================================
+add_image_size('med-center', 570, 450, true); //post center thumb template page home
+add_image_size('min-275', 275, 200, true);
+add_image_size('medium-380', 380, 190, true);
+add_image_size('post-thumb', 844, 420, true);
+add_image_size('post-thumb-related-260', 260, 140, true);
+add_image_size('post-archive-225', 225, 150, true);
+add_image_size('thumb-flag-page', 85, 59, false);
+add_image_size('top_home2', 1220, 550, true);
+//============================== tamanho das imagens ====================================
 
 
 include('admin/fields/infoHome.php');

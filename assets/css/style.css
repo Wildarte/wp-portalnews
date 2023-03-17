@@ -883,7 +883,6 @@ nav.menu ul li.menu-item-has-children:hover ul.sub-menu{
 }
 .photo_sidebar_site img{
     width: 100%;
-    border-radius: 50%;
     width: 85px;
     height: 85px;
     object-fit: cover;
@@ -898,11 +897,14 @@ nav.menu ul li.menu-item-has-children:hover ul.sub-menu{
     font-weight: 500;
     display: flex;
     margin-bottom: 10px;
+    font-size: .92em;
+    line-height: 1.2em;
 }
 .info_sidebar_site p{
     color: var(--color-dark-hover);
     font-weight: 300;
     margin-bottom: 10px;
+    font-size: .875em;
 }
 
 
@@ -1061,6 +1063,9 @@ footer.footer{
     }
     .post_simple img{
         height: 350px;
+    }
+    .col_list_row{
+        padding: 20px 10px;
     }
 }
 

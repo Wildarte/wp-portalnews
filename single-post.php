@@ -51,7 +51,7 @@
 
                 <div class="body_post">
                     <figure class="thumbnail_post">
-                        <img src="<?= get_the_post_thumbnail_url() ?>" alt="<?= get_image_alt($id) ?>" title="<?= get_image_alt($id) ?>">
+                        <?= get_the_post_thumbnail(null, 'post-thumb') ?>
                         <figcaption><?= get_the_post_thumbnail_caption() ?></figcaption>
                     </figure>
 

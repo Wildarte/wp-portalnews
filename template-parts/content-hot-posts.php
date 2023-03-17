@@ -44,8 +44,8 @@
     </header>
     <article class="post_dubble_col">
         <div class="post_dubble_left">
-        <a href="" class="link_thumb_post_dubble_col">
-            <img src="<?= get_the_post_thumbnail_url(null, 'medium'); ?>" alt="">
+        <a href="<?= get_the_permalink(); ?>" class="link_thumb_post_dubble_col">
+            <?= get_the_post_thumbnail(null, 'medium'); ?>
         </a>
 
         <h2 class="title_post_dubble_col">
@@ -79,10 +79,11 @@
     <header class="header_module">
         <h2><?= get_cat_name($mod_right_hot_post); ?> <span></span></h2>
     </header>
+
     <article class="post_dubble_col">
         <div class="post_dubble_left">
-        <a href="" class="link_thumb_post_dubble_col">
-            <img src="<?= get_the_post_thumbnail_url(null, 'medium'); ?>" alt="">
+        <a href="<?= get_the_permalink(); ?>" class="link_thumb_post_dubble_col">
+            <?= get_the_post_thumbnail(null, 'medium'); ?>
         </a>
 
         <h2 class="title_post_dubble_col">
@@ -103,6 +104,7 @@
         </div>
         
     </article>
+
     <?php endwhile; endif; wp_reset_query() ?>
     </div>
     

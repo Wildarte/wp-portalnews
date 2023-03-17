@@ -24,7 +24,7 @@
 
     <article class="post_simple f-25">
         <a href="<?=  get_the_permalink(); ?>">
-            <img src="<?= get_the_post_thumbnail_url() ?>" alt="">
+            <?= get_the_post_thumbnail(null, 'medium') ?>
         </a>
 
         <div class="info_post_simple">

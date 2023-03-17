@@ -1,7 +1,7 @@
 <div class="content_sidebar_site">
 
     <div class="header_sidebar_site">
-        <a href="" class="link_logo_sidebar_site">
+        <a href="<?= home_url(); ?>" class="link_logo_sidebar_site">
             <?php
                 $custom_logo_id = get_theme_mod( 'custom_logo' );
                 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
@@ -38,7 +38,7 @@
 
         <article class="card_sidebar_site">
             <div class="photo_sidebar_site">
-            <img src="<?= get_the_post_thumbnail_url(null,'thumb'); ?>" alt="">
+            <?= get_the_post_thumbnail(null,'thumbnail'); ?>
             </div>
 
             <div class="info_sidebar_site">
