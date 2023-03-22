@@ -11,6 +11,7 @@ if(!empty($cor_principal_page)):
     }
   </style>
 <?php endif; ?>
+
     <main>
 
         <?php 

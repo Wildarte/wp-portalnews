@@ -53,7 +53,7 @@ function wpcurso_config(){
 
 
     	
-    //add_theme_support( 'post-formats', ['video', 'image']); //essa linha permite habilitar diferentes formatos de post, ppor exemplo podem existir no tema posts de vídeos, imagens, etc  
+    //add_theme_support( 'post-formats', ['chat']); //essa linha permite habilitar diferentes formatos de post, ppor exemplo podem existir no tema posts de vídeos, imagens, etc  
 
 
     add_theme_support('title-tag'); //adiciona suporte a tag title do site, dessa forma não precisa adicionar ela no seu código fonte basta apenas adicionarmos essa linha e o wordpress se encarrega do resto
@@ -144,6 +144,11 @@ function my_excerpt_length($length){
 }
 add_filter('excerpt_length', 'my_excerpt_length');
 
+//function for custom excerpt read more
+function wpdocs_excerpt_more( $more ) {
+    return '...';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 //============================== tamanho das imagens ====================================
 add_image_size('med-center', 570, 450, true); //post center thumb template page home
@@ -155,6 +160,7 @@ add_image_size('post-archive-225', 225, 150, true);
 add_image_size('thumb-flag-page', 85, 59, false);
 add_image_size('top_home2', 1220, 550, true);
 //============================== tamanho das imagens ====================================
+
 
 
 include('admin/fields/infoHome.php');

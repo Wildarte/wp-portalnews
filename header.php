@@ -134,3 +134,48 @@
             </div>
         </div>
     </header>
+
+
+    <!-- =========================== palavra do dia ============================================================== -->
+        <?php
+
+        if(!is_single()):
+
+            $args = [
+              'post_type' => 'post',
+              'posts_per_page' => 1,
+              'category_name' => 'palavra-do-dia'
+            ];
+
+            $result_day_word = new WP_Query($args);
+
+            if($result_day_word->have_posts()):
+              while($result_day_word->have_posts()):
+                $result_day_word->the_post();
+
+        ?>
+    <div class="day_word container">
+      <p><span class="icon_day_word"><i class="bi bi-clock"></i></span><strong><?= get_the_date('d/m/Y'); ?></strong> <span class="title_day_word">PALAVRA DO DIA</span> <a id="text_day_word" href="<?= get_the_permalink(); ?>"></a></p>
+
+      <script>
+
+        
+        var n = 0;
+        var txt = "<?= esc_html(get_the_excerpt()); ?>";
+        var speed = 50;
+
+        function typeWriter() {
+            if (n < txt.length) {
+                document.getElementById("text_day_word").innerHTML += txt.charAt(n);
+                n++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        typeWriter();
+        
+
+      </script>
+    </div>
+    <?php endwhile; endif; wp_reset_query(); endif; ?>
+    <!-- =========================== palavra do dia ============================================================== -->
