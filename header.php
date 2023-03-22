@@ -158,7 +158,6 @@
       <p><span class="icon_day_word"><i class="bi bi-clock"></i></span><strong><?= get_the_date('d/m/Y'); ?></strong> <span class="title_day_word">PALAVRA DO DIA</span> <a id="text_day_word" href="<?= get_the_permalink(); ?>"></a></p>
 
       <script>
-
         
         var n = 0;
         var txt = "<?= esc_html(get_the_excerpt()); ?>";
@@ -173,7 +172,6 @@
         }
 
         typeWriter();
-        
 
       </script>
     </div>

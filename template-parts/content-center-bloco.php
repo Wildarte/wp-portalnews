@@ -79,34 +79,5 @@
 
     <?php endwhile; endif; wp_reset_query() ?>
 
-    <!-- 
-
-    <article class="post_default">
-        <div class="info_post_default">
-        <p><small><span class="info_post_default_date">02/02/2022 </span> | <span class="info_post_default_category">Esporte</span> | por <span class="info_post_default_author">Admin</span></small></p>
-        </div>
-        <h3 class="title_post_default">
-        <a href="">The Best College Football Team You’ve Probably Never Heard Of</a>
-        </h3>
-
-        <p>Aenean rhoncus gravida nisl vel pretium. Nam ac nisl non ipsum vestibulum vehicula vulputate sagittis magna.</p>
-
-        <a href="" class="link_post_default"><strong>Ler Mais</strong></a>
-    </article>
-
-    <article class="post_default">
-        <div class="info_post_default">
-        <p><small><span class="info_post_default_date">02/02/2022 </span> | <span class="info_post_default_category">Esporte</span> | por <span class="info_post_default_author">Admin</span></small></p>
-        </div>
-        <h3 class="title_post_default">
-        <a href="">The Best College Football Team You’ve Probably Never Heard Of</a>
-        </h3>
-
-        <p>Aenean rhoncus gravida nisl vel pretium. Nam ac nisl non ipsum vestibulum vehicula vulputate sagittis magna.</p>
-
-        <a href="" class="link_post_default"><strong>Ler Mais</strong></a>
-    </article>
-
-     -->
 
 </section>

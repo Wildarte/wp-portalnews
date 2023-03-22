@@ -1,6 +1,7 @@
 <?php get_header();
 //Template Name: Home
 $cor_principal_page = get_field('cor_principal_page');
+$id_page = get_the_ID();//id da pagina
 
 if(!empty($cor_principal_page)):
 ?>
@@ -30,6 +31,18 @@ if(!empty($cor_principal_page)):
 
               <h2><?= get_cat_name(get_field('categoria_geral_page')); ?></h2>
             </header>
+
+            <!-- 
+            <div class="btn_show_script" data-page="21">
+              <span>Previsão do Tempo</span>
+
+              <img src="https://cdn-icons-png.flaticon.com/512/84/84555.png" alt="">
+            </div>
+
+            <div id="set_response_script">
+
+            </div>
+             -->
               
             <?= get_field('codigo_do_tempo'); //insere o código do tempo ?>
              
