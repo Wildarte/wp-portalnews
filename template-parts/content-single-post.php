@@ -55,7 +55,7 @@
             
             <div class="body_content_post">
                 
-            <?=  get_the_content(); ?>
+            <?php the_content(); ?>
 
             </div>
 
