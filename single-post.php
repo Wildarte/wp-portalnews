@@ -11,7 +11,7 @@
 
                     get_template_part('template-parts/content', 'single-post');
 
-                    echo '<aside class="f-30 sidebar_post">';
+                    echo '<aside class="f-25 sidebar_post">';
 
                         get_sidebar('blog');
                 

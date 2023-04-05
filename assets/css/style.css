@@ -1213,6 +1213,7 @@ footer.footer{
     }
     nav.menu ul.menu li.menu-item-has-children{
         justify-content: space-between;
+        overflow: hidden;
     }
     nav.menu ul.menu > li.menu-item-has-children > a{
         width: 100%;
@@ -1250,7 +1251,7 @@ footer.footer{
         flex-wrap: wrap;
     }
     nav.menu li.menu-item-has-children ul.sub-menu li.menu-item-has-children ul.sub-menu{
-
+        z-index: -1;
     }
     .header_day_word h2{
         font-size: 30px;

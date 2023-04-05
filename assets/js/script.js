@@ -195,40 +195,51 @@ function check_font_site(){
 
 
 //================================== control submenus mobile ===============================
-const submenus = document.querySelectorAll('nav.menu ul.menu li.menu-item-has-children');
-const submenus_submenu = document.querySelectorAll('nav.menu li.menu-item-has-children ul.sub-menu li.menu-item-has-children');
+const submenus = document.querySelectorAll('nav.menu > ul.menu > li.menu-item-has-children > a');
 
-submenus.forEach((item) => {
+const list_submenus = document.querySelectorAll('nav.menu ul.menu > li.menu-item-has-children > ul.sub-menu');
+
+const submenus_submenu = document.querySelectorAll('nav.menu ul.menu > li.menu-item-has-children > ul.sub-menu > li.menu-item-has-children > a');
+
+const list_submenus2 = document.querySelectorAll('nav.menu ul.menu > li.menu-item-has-children > ul.sub-menu > li.menu-item-has-children > ul.sub-menu');
+
+console.log('submenus: '+submenus.length);
+console.log('list_submenu: '+list_submenus.length);
+
+console.log('submenus_submenu: '+submenus_submenu.length);
+console.log('list_submenu2: '+list_submenus2.length);
+
+submenus.forEach((item, index) => {
 
     item.addEventListener('click', (e) => {
 
+        console.log('click');
+
         e.preventDefault();
 
-        if(item.querySelector('ul.sub-menu').classList.contains('open_sub_menu_mobile')){
-            item.querySelector('ul.sub-menu').classList.remove('open_sub_menu_mobile');
+        if(list_submenus[index].classList.contains('open_sub_menu_mobile')){
+            list_submenus[index].classList.remove('open_sub_menu_mobile');
         }else{
-            item.querySelector('ul.sub-menu').classList.add('open_sub_menu_mobile');
+            list_submenus[index].classList.add('open_sub_menu_mobile');
         }
-
-        
 
     });
 
 });
 
-submenus_submenu.forEach((item) => {
+submenus_submenu.forEach((item, index) => {
 
     item.addEventListener('click', (e) => {
 
+        console.log('click');
+
         e.preventDefault();
 
-        if(e.currentTarget.querySelector('ul.sub-menu').classList.contains('open_sub_menu_mobile')){
-            e.currentTarget.querySelector('ul.sub-menu').classList.remove('open_sub_menu_mobile');
+        if(list_submenus2[index].classList.contains('open_sub_menu_mobile')){
+            list_submenus2[index].classList.remove('open_sub_menu_mobile');
         }else{
-            e.currentTarget.querySelector('ul.sub-menu').classList.add('open_sub_menu_mobile');
+            list_submenus2[index].classList.add('open_sub_menu_mobile');
         }
-
-        
 
     });
 

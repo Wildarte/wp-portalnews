@@ -10,7 +10,7 @@
     $args = [
         'post_type' => 'post',
         'cat' => $cat_mod,
-        'posts_per_page' => 4
+        'posts_per_page' => $list_sidebar_left
     ];
 
     $results_cat_module1 = new WP_Query($args);

@@ -21,7 +21,7 @@
     if($result_center_bloco->have_posts()):
         while($result_center_bloco->have_posts()):
             $result_center_bloco->the_post();
-
+                
 ?>
 
 <article class="post_center_top">

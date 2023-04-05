@@ -1,4 +1,4 @@
-<div class="content_post f-70">
+<div class="content_post f-75">
         <header class="header_content_post">
             <div class="top_header_post d-flex">
                 <div class="left_top_header_post f-50">
